@@ -5,7 +5,7 @@ import { VendorInformation } from "./components/VendorInformation";
 import { FetchError } from "./components/FetchError";
 import { EmptyError } from "./components/EmptyError";
 
-export default function lookup(props: LaunchProps<{ arguments: Arguments.Index }>) {
+export default function lookup(props: LaunchProps<{ arguments: Arguments.Lookup }>) {
   const { address } = props.arguments;
   const { isLoading, data, error } = useFetch<LookupResponse[]>(`https://www.macvendorlookup.com/api/v2/${address}`);
 
